@@ -2,6 +2,12 @@
   <img src='http://bit.ly/1eze8aE'>
 </div>
 
-<h1>
-  My name is <%= @name %>
-</h1>
+<% if @name %>
+<h1>My name is <%= @name %></h1>
+<% end %>
+<!-- This means the 'My name is' won't appear until we submit a name -->
+
+<form action="/named-cat">
+  <input type="text" name="name">
+  <input type="submit" value="Submit">
+</form>
